@@ -9,8 +9,8 @@ env:
   DOTNET_VERSION: '8.0.x'
   SONAR_ORG: 'apibankk'
   SONAR_PROJECT: 'apibankk_lab3'
-  NUGET_PROJECT: 'Bank/Bank.Domain/Bank.Domain.csproj'
-  NUGET_OUTPUT_DIR: './nupkg'
+  NUGET_PROJECT: Bank/Bank.WebApi/Bank.WebApi.csproj
+  NUGET_OUTPUT_DIR: ./nupkgs
 
 jobs:
   build-and-publish:
@@ -49,6 +49,7 @@ jobs:
       # 6. Empaquetar NuGet
       - name: Empaquetar proyecto NuGet
         run: dotnet pack ${{ env.NUGET_PROJECT }} -c Release -o ${{ env.NUGET_OUTPUT_DIR }}
+
 
       # 7. Publicar paquete NuGet en GitHub Packages
       - name: Publicar paquete NuGet
