@@ -20,7 +20,9 @@
           "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "docker-compose.yml"
+
         ]
       }
     ],

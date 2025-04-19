@@ -17,7 +17,6 @@ items:
 references:
 - uid: Bank.WebApi.Models.BankAccount
   commentId: T:Bank.WebApi.Models.BankAccount
-  href: Bank.WebApi.Models.BankAccount.html
   name: BankAccount
   nameWithType: BankAccount
   fullName: Bank.WebApi.Models.BankAccount

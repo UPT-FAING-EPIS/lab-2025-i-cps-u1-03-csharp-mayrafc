@@ -20,10 +20,12 @@ items:
       repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
     id: BankAccountTests
     path: Bank.WebApi.Tests/BanckAccountTests.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Bank.WebApi.Tests
   namespace: Bank.Domain.Tests
+  summary: "\nClase de pruebas unitarias para la clase <xref href=\"Bank.WebApi.Models.BankAccount\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public class BankAccountTests
     content.vb: Public Class BankAccountTests
@@ -37,6 +39,12 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance
   commentId: M:Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance
   id: Debit_WithValidAmount_UpdatesBalance
@@ -55,10 +63,12 @@ items:
       repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
     id: Debit_WithValidAmount_UpdatesBalance
     path: Bank.WebApi.Tests/BanckAccountTests.cs
-    startLine: 7
+    startLine: 14
   assemblies:
   - Bank.WebApi.Tests
   namespace: Bank.Domain.Tests
+  summary: "\nVerifica que al debitar una cantidad válida,\nel saldo de la cuenta se actualice correctamente.\n"
+  example: []
   syntax:
     content: >-
       [Test]
@@ -67,283 +77,321 @@ items:
     content.vb: >-
       <Test>
 
-      Public Sub Debit_WithValidAmount_UpdatesBalance()
+      Public Sub Debit_WithValidAmount_UpdatesBalance
   overload: Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance*
   attributes:
   - type: NUnit.Framework.TestAttribute
     ctor: NUnit.Framework.TestAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
+- uid: Bank.WebApi.Models.BankAccount
+  commentId: T:Bank.WebApi.Models.BankAccount
+  name: BankAccount
+  nameWithType: BankAccount
+  fullName: Bank.WebApi.Models.BankAccount
 - uid: Bank.Domain.Tests
   commentId: N:Bank.Domain.Tests
-  href: Bank.html
   name: Bank.Domain.Tests
   nameWithType: Bank.Domain.Tests
   fullName: Bank.Domain.Tests
-  spec.csharp:
-  - uid: Bank
-    name: Bank
-    href: Bank.html
-  - name: .
-  - uid: Bank.Domain
-    name: Domain
-    href: Bank.Domain.html
-  - name: .
-  - uid: Bank.Domain.Tests
-    name: Tests
-    href: Bank.Domain.Tests.html
-  spec.vb:
-  - uid: Bank
-    name: Bank
-    href: Bank.html
-  - name: .
-  - uid: Bank.Domain
-    name: Domain
-    href: Bank.Domain.html
-  - name: .
-  - uid: Bank.Domain.Tests
-    name: Tests
-    href: Bank.Domain.Tests.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.GetHashCode
   commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
   name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.MemberwiseClone
   commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance*
   commentId: Overload:Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance
-  href: Bank.Domain.Tests.BankAccountTests.html#Bank_Domain_Tests_BankAccountTests_Debit_WithValidAmount_UpdatesBalance
   name: Debit_WithValidAmount_UpdatesBalance
   nameWithType: BankAccountTests.Debit_WithValidAmount_UpdatesBalance
   fullName: Bank.Domain.Tests.BankAccountTests.Debit_WithValidAmount_UpdatesBalance
