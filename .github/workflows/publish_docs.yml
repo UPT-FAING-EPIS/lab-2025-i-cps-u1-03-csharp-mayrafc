@@ -13,10 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Configurar DocFX
       - name: Instalar DocFX
         run: |
-          curl -sSL https://github.com/dotnet/docfx/releases/download/v2.64.2/docfx.zip -o docfx.zip
+          curl -sSL https://github.com/dotnet/docfx/releases/download/v2.75.1/docfx.zip -o docfx.zip
           unzip docfx.zip -d docfx
           chmod +x docfx/docfx
 
