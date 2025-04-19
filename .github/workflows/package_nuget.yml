@@ -56,7 +56,7 @@ jobs:
           echo "Listing .nupkg files:"
           ls -la ${{ env.NUGET_OUTPUT_DIR }}
 
-          dotnet nuget add source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" \
+          dotnet nuget add source "https://nuget.pkg.github.com/mayrafc/index.json" \
             --name github \
             --username ${{ github.actor }} \
             --password ${{ secrets.GIT_TOKEN }} \
