@@ -25,7 +25,8 @@ jobs:
 
       # 4. Ejecutar pruebas unitarias
       - name: Ejecutar pruebas unitarias
-        run: dotnet test --collect:"XPlat Code Coverage"
+        run: dotnet test Bank/Bank.WebApi.Tests/Bank.WebApi.Tests.csproj --collect:"XPlat Code Coverage"
+
 
       # 5. Analizar con SonarCloud
       - name: Analizar con SonarCloud
