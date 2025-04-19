@@ -1,5 +1,22 @@
 {
-  "errors": [],
+  "errors": [
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.remote-property-injection.remote-property-injection on Bank/styles/docfx.vendor.js:\n ",
+      "path": "Bank/styles/docfx.vendor.js",
+      "rule_id": "javascript.express.security.audit.remote-property-injection.remote-property-injection",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running typescript.react.security.audit.react-unsanitized-method.react-unsanitized-method on Bank/styles/docfx.vendor.js:\n ",
+      "path": "Bank/styles/docfx.vendor.js",
+      "rule_id": "typescript.react.security.audit.react-unsanitized-method.react-unsanitized-method",
+      "type": "Timeout"
+    }
+  ],
   "interfile_languages_used": [],
   "paths": {
     "scanned": [
@@ -139,6 +156,14 @@
       "Bank/_site/xrefmap.yml",
       "Bank/disenio.md",
       "Bank/docfx.json",
+      "Bank/docfx_project/.gitignore",
+      "Bank/docfx_project/api/.gitignore",
+      "Bank/docfx_project/api/index.md",
+      "Bank/docfx_project/articles/intro.md",
+      "Bank/docfx_project/articles/toc.yml",
+      "Bank/docfx_project/docfx.json",
+      "Bank/docfx_project/index.md",
+      "Bank/docfx_project/toc.yml",
       "Bank/docker-compose.yml",
       "Bank/docs/.manifest",
       "Bank/docs/Bank.Domain.Tests.BankAccountTests.yml",
@@ -146,10 +171,29 @@
       "Bank/docs/Bank.WebApi.Models.BankAccount.yml",
       "Bank/docs/Bank.WebApi.Models.yml",
       "Bank/docs/toc.yml",
+      "Bank/favicon.ico",
+      "Bank/fonts/glyphicons-halflings-regular.eot",
+      "Bank/fonts/glyphicons-halflings-regular.svg",
+      "Bank/fonts/glyphicons-halflings-regular.ttf",
+      "Bank/fonts/glyphicons-halflings-regular.woff",
+      "Bank/fonts/glyphicons-halflings-regular.woff2",
+      "Bank/index.json",
       "Bank/index.md",
+      "Bank/logo.svg",
+      "Bank/manifest.json",
+      "Bank/search-stopwords.json",
       "Bank/semgrep-report.html",
       "Bank/semgrep.json",
+      "Bank/styles/docfx.css",
+      "Bank/styles/docfx.js",
+      "Bank/styles/docfx.vendor.css",
+      "Bank/styles/docfx.vendor.js",
+      "Bank/styles/lunr.js",
+      "Bank/styles/main.css",
+      "Bank/styles/main.js",
+      "Bank/styles/search-worker.js",
       "Bank/toc.yml",
+      "Bank/xrefmap.yml",
       "README.md"
     ]
   },

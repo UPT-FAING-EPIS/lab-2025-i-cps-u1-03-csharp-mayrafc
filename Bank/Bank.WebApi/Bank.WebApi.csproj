@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <NoWarn>$(NoWarn);1591</NoWarn>
     <Version>1.0.0</Version> 
     <IsPackable>true</IsPackable>
   </PropertyGroup>
