@@ -16,16 +16,12 @@ jobs:
 
       # 2. Instalar DocFX
       - name: Instalar DocFX
-        run: |
-          curl -sSL https://github.com/dotnet/docfx/releases/download/v2.75.1/docfx.zip -o docfx.zip
-          unzip docfx.zip -d docfx
-          chmod +x docfx/docfx
-          ./docfx/docfx --version  # Verificar que DocFX se instaló correctamente
+        run: dotnet tool update -g docfx
 
       # 3. Generar la documentación
       - name: Generar documentación con DocFX
         run: |
-          ./docfx/docfx build
+          docfx build
 
       # 4. Subir la documentación generada a GitHub Pages
       - name: Deploy documentation to GitHub Pages
