@@ -51,7 +51,7 @@ jobs:
     - name: Create GitHub Release
       id: create_release
       run: |
-        RELEASE_TAG=$(echo ${GITHUB_REF} | sed 's/refs\/tags\///')  # Este debería ser un tag, no una rama
+        RELEASE_TAG=$(echo ${GITHUB_REF} | sed 's/refs\/tags\///')  
         if [[ $RELEASE_TAG == "refs/heads/"* ]]; then
           echo "This is not a tag push, skipping release creation."
           exit 0
