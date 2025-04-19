@@ -10,23 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout del código
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Instalar DocFX
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'  
+
       - name: Instalar DocFX
         run: dotnet tool update -g docfx
 
-      # 3. Generar la documentación
-      - name: Generar documentación con DocFX
-        run: |
-          docfx build
+      - name: Generar metadata con DocFX
+        run: docfx metadata Bank/docfx.json  
 
-      # 4. Subir la documentación generada a GitHub Pages
+      - name: Generar documentación con DocFX
+        run: docfx build Bank/docfx.json  
+
       - name: Deploy documentation to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  
-          publish_branch: gh-pages
+          publish_dir: Bank/_site  
+          publish_branch: gh-pages 
