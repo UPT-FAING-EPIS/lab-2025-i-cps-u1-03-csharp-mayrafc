@@ -1,0 +1,45 @@
+name: Empaquetar y publicar NuGet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el código
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      # 2. Configurar .NET
+      - name: Configurar .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # 3. Restaurar dependencias
+      - name: Restaurar dependencias
+        run: dotnet restore
+
+      # 4. Ejecutar pruebas unitarias
+      - name: Ejecutar pruebas unitarias
+        run: dotnet test --collect:"XPlat Code Coverage"
+
+      # 5. Analizar con SonarCloud
+      - name: Analizar con SonarCloud
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          organization: apibankk
+          projectKey: apibankk_lab3
+          token: ${{ secrets.SONAR_TOKEN }}
+
+      # 6. Empaquetar NuGet
+      - name: Empaquetar proyecto Bank.WebApi
+        run: dotnet pack Bank/Bank.WebApi/Bank.WebApi.csproj -c Release -o output
+
+      # 7. Publicar NuGet en GitHub Packages
+      - name: Publicar paquete
+        run: dotnet nuget push output/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
