@@ -4,6 +4,7 @@
   "paths": {
     "scanned": [
       ".github/workflows/classroom.yml",
+      ".github/workflows/publish_docs.yml",
       ".github/workflows/semgrep.yml",
       ".github/workflows/snyk.yml",
       ".gitignore",
