@@ -52,4 +52,16 @@ jobs:
 
 
       - name: Publicar paquete NuGet
-        run: dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Listing .nupkg files:"
+          ls -la ${{ env.NUGET_OUTPUT_DIR }}
+
+          dotnet nuget add source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" \
+            --name github \
+            --username ${{ github.actor }} \
+            --password ${{ secrets.GIT_TOKEN }} \
+            --store-password-in-clear-text
+
+          dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg --source "github" --skip-duplicate
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
