@@ -1,0 +1,573 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bank.WebApi.Models.BankAccount
+  commentId: T:Bank.WebApi.Models.BankAccount
+  id: BankAccount
+  parent: Bank.WebApi.Models
+  children:
+  - Bank.WebApi.Models.BankAccount.#ctor(System.String,System.Double)
+  - Bank.WebApi.Models.BankAccount.Balance
+  - Bank.WebApi.Models.BankAccount.Credit(System.Double)
+  - Bank.WebApi.Models.BankAccount.CustomerName
+  - Bank.WebApi.Models.BankAccount.Debit(System.Double)
+  langs:
+  - csharp
+  - vb
+  name: BankAccount
+  nameWithType: BankAccount
+  fullName: Bank.WebApi.Models.BankAccount
+  type: Class
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: BankAccount
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 5
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nRepresenta una cuenta bancaria con un nombre de cliente y un balance.\n"
+  example: []
+  syntax:
+    content: public class BankAccount
+    content.vb: Public Class BankAccount
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bank.WebApi.Models.BankAccount.#ctor(System.String,System.Double)
+  commentId: M:Bank.WebApi.Models.BankAccount.#ctor(System.String,System.Double)
+  id: '#ctor(System.String,System.Double)'
+  parent: Bank.WebApi.Models.BankAccount
+  langs:
+  - csharp
+  - vb
+  name: BankAccount(String, Double)
+  nameWithType: BankAccount.BankAccount(String, Double)
+  fullName: Bank.WebApi.Models.BankAccount.BankAccount(System.String, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: .ctor
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 20
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nCrea una nueva cuenta bancaria con un nombre de cliente y un balance inicial.\n"
+  example: []
+  syntax:
+    content: public BankAccount(string customerName, double balance)
+    parameters:
+    - id: customerName
+      type: System.String
+      description: El nombre del cliente asociado a la cuenta.
+    - id: balance
+      type: System.Double
+      description: El balance inicial de la cuenta.
+    content.vb: Public Sub New(customerName As String, balance As Double)
+  overload: Bank.WebApi.Models.BankAccount.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bank.WebApi.Models.BankAccount.CustomerName
+  commentId: P:Bank.WebApi.Models.BankAccount.CustomerName
+  id: CustomerName
+  parent: Bank.WebApi.Models.BankAccount
+  langs:
+  - csharp
+  - vb
+  name: CustomerName
+  nameWithType: BankAccount.CustomerName
+  fullName: Bank.WebApi.Models.BankAccount.CustomerName
+  type: Property
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: CustomerName
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 29
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nObtiene el nombre del cliente asociado a la cuenta.\n"
+  example: []
+  syntax:
+    content: public string CustomerName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property CustomerName As String
+  overload: Bank.WebApi.Models.BankAccount.CustomerName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bank.WebApi.Models.BankAccount.Balance
+  commentId: P:Bank.WebApi.Models.BankAccount.Balance
+  id: Balance
+  parent: Bank.WebApi.Models.BankAccount
+  langs:
+  - csharp
+  - vb
+  name: Balance
+  nameWithType: BankAccount.Balance
+  fullName: Bank.WebApi.Models.BankAccount.Balance
+  type: Property
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: Balance
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 34
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nObtiene el balance actual de la cuenta.\n"
+  example: []
+  syntax:
+    content: public double Balance { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Balance As Double
+  overload: Bank.WebApi.Models.BankAccount.Balance*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bank.WebApi.Models.BankAccount.Debit(System.Double)
+  commentId: M:Bank.WebApi.Models.BankAccount.Debit(System.Double)
+  id: Debit(System.Double)
+  parent: Bank.WebApi.Models.BankAccount
+  langs:
+  - csharp
+  - vb
+  name: Debit(Double)
+  nameWithType: BankAccount.Debit(Double)
+  fullName: Bank.WebApi.Models.BankAccount.Debit(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: Debit
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 41
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nRealiza un débito en la cuenta, reduciendo el balance.\n"
+  example: []
+  syntax:
+    content: public void Debit(double amount)
+    parameters:
+    - id: amount
+      type: System.Double
+      description: El monto a debitar de la cuenta.
+    content.vb: Public Sub Debit(amount As Double)
+  overload: Bank.WebApi.Models.BankAccount.Debit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bank.WebApi.Models.BankAccount.Credit(System.Double)
+  commentId: M:Bank.WebApi.Models.BankAccount.Credit(System.Double)
+  id: Credit(System.Double)
+  parent: Bank.WebApi.Models.BankAccount
+  langs:
+  - csharp
+  - vb
+  name: Credit(Double)
+  nameWithType: BankAccount.Credit(Double)
+  fullName: Bank.WebApi.Models.BankAccount.Credit(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Bank/Bank.WebApi/Models/BankAccount.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-03-csharp-mayrafc.git
+    id: Credit
+    path: Bank.WebApi/Models/BankAccount.cs
+    startLine: 55
+  assemblies:
+  - Bank.WebApi
+  namespace: Bank.WebApi.Models
+  summary: "\nRealiza un crédito en la cuenta, aumentando el balance.\n"
+  example: []
+  syntax:
+    content: public void Credit(double amount)
+    parameters:
+    - id: amount
+      type: System.Double
+      description: El monto a acreditar a la cuenta.
+    content.vb: Public Sub Credit(amount As Double)
+  overload: Bank.WebApi.Models.BankAccount.Credit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bank.WebApi.Models
+  commentId: N:Bank.WebApi.Models
+  name: Bank.WebApi.Models
+  nameWithType: Bank.WebApi.Models
+  fullName: Bank.WebApi.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bank.WebApi.Models.BankAccount.#ctor*
+  commentId: Overload:Bank.WebApi.Models.BankAccount.#ctor
+  name: BankAccount
+  nameWithType: BankAccount.BankAccount
+  fullName: Bank.WebApi.Models.BankAccount.BankAccount
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Bank.WebApi.Models.BankAccount.CustomerName*
+  commentId: Overload:Bank.WebApi.Models.BankAccount.CustomerName
+  name: CustomerName
+  nameWithType: BankAccount.CustomerName
+  fullName: Bank.WebApi.Models.BankAccount.CustomerName
+- uid: Bank.WebApi.Models.BankAccount.Balance*
+  commentId: Overload:Bank.WebApi.Models.BankAccount.Balance
+  name: Balance
+  nameWithType: BankAccount.Balance
+  fullName: Bank.WebApi.Models.BankAccount.Balance
+- uid: Bank.WebApi.Models.BankAccount.Debit*
+  commentId: Overload:Bank.WebApi.Models.BankAccount.Debit
+  name: Debit
+  nameWithType: BankAccount.Debit
+  fullName: Bank.WebApi.Models.BankAccount.Debit
+- uid: Bank.WebApi.Models.BankAccount.Credit*
+  commentId: Overload:Bank.WebApi.Models.BankAccount.Credit
+  name: Credit
+  nameWithType: BankAccount.Credit
+  fullName: Bank.WebApi.Models.BankAccount.Credit
