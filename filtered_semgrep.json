@@ -3,49 +3,9 @@
     {
       "code": 2,
       "level": "warn",
-      "message": "Timeout when running javascript.aws-lambda.security.tainted-html-string.tainted-html-string on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
-      "rule_id": "javascript.aws-lambda.security.tainted-html-string.tainted-html-string",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.aws-lambda.security.vm-runincontext-injection.vm-runincontext-injection on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
-      "rule_id": "javascript.aws-lambda.security.vm-runincontext-injection.vm-runincontext-injection",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.lang.security.audit.sqli.node-mysql-sqli.node-mysql-sqli on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
-      "rule_id": "javascript.lang.security.audit.sqli.node-mysql-sqli.node-mysql-sqli",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.aws-lambda.security.tainted-html-string.tainted-html-string on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
-      "rule_id": "javascript.aws-lambda.security.tainted-html-string.tainted-html-string",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.express-open-redirect.express-open-redirect on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
-      "rule_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
-      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
+      "message": "Timeout when running javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag on Bank/docfx/.playwright/package/lib/protocol/validator.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/protocol/validator.js",
+      "rule_id": "javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag",
       "type": "Timeout"
     },
     {
@@ -69,62 +29,6 @@
       "level": "warn",
       "message": "Timeout when running javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp on Bank/styles/docfx.vendor.js:\n ",
       "path": "Bank/styles/docfx.vendor.js",
-      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag on Bank/docfx/.playwright/package/lib/protocol/validator.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/protocol/validator.js",
-      "rule_id": "javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
-      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.remote-property-injection.remote-property-injection on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
-      "rule_id": "javascript.express.security.audit.remote-property-injection.remote-property-injection",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
-      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
-      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.express.security.audit.remote-property-injection.remote-property-injection on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
-      "rule_id": "javascript.express.security.audit.remote-property-injection.remote-property-injection",
-      "type": "Timeout"
-    },
-    {
-      "code": 2,
-      "level": "warn",
-      "message": "Timeout when running javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
-      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
       "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
       "type": "Timeout"
     },
@@ -155,6 +59,102 @@
     {
       "code": 2,
       "level": "warn",
+      "message": "Timeout when running javascript.aws-lambda.security.tainted-html-string.tainted-html-string on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
+      "rule_id": "javascript.aws-lambda.security.tainted-html-string.tainted-html-string",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.express-open-redirect.express-open-redirect on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
+      "rule_id": "javascript.express.security.audit.express-open-redirect.express-open-redirect",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/utilsBundleImpl/index.js",
+      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
+      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.remote-property-injection.remote-property-injection on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
+      "rule_id": "javascript.express.security.audit.remote-property-injection.remote-property-injection",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/xtermModule-c-SNdYZy.js",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
+      "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.express.security.audit.remote-property-injection.remote-property-injection on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
+      "rule_id": "javascript.express.security.audit.remote-property-injection.remote-property-injection",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp on Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/recorder/assets/index-B70BEW3b.js",
+      "rule_id": "javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.aws-lambda.security.tainted-html-string.tainted-html-string on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
+      "rule_id": "javascript.aws-lambda.security.tainted-html-string.tainted-html-string",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.aws-lambda.security.vm-runincontext-injection.vm-runincontext-injection on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
+      "rule_id": "javascript.aws-lambda.security.vm-runincontext-injection.vm-runincontext-injection",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "message": "Timeout when running javascript.lang.security.audit.sqli.node-mysql-sqli.node-mysql-sqli on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js:\n ",
+      "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/codeMirrorModule-CyuxU5C-.js",
+      "rule_id": "javascript.lang.security.audit.sqli.node-mysql-sqli.node-mysql-sqli",
+      "type": "Timeout"
+    },
+    {
+      "code": 2,
+      "level": "warn",
       "message": "Timeout when running javascript.express.security.audit.express-ssrf.express-ssrf on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js:\n ",
       "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js",
       "rule_id": "javascript.express.security.audit.express-ssrf.express-ssrf",
@@ -163,17 +163,17 @@
     {
       "code": 2,
       "level": "warn",
-      "message": "Timeout when running javascript.express.security.express-insecure-template-usage.express-insecure-template-usage on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js:\n ",
+      "message": "Timeout when running javascript.express.security.injection.raw-html-format.raw-html-format on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js:\n ",
       "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js",
-      "rule_id": "javascript.express.security.express-insecure-template-usage.express-insecure-template-usage",
+      "rule_id": "javascript.express.security.injection.raw-html-format.raw-html-format",
       "type": "Timeout"
     },
     {
       "code": 2,
       "level": "warn",
-      "message": "Timeout when running javascript.express.security.injection.raw-html-format.raw-html-format on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js:\n ",
+      "message": "Timeout when running javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring on Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js:\n ",
       "path": "Bank/docfx/.playwright/package/lib/vite/traceViewer/assets/defaultSettingsView-5nVJRt0A.js",
-      "rule_id": "javascript.express.security.injection.raw-html-format.raw-html-format",
+      "rule_id": "javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring",
       "type": "Timeout"
     }
   ],
