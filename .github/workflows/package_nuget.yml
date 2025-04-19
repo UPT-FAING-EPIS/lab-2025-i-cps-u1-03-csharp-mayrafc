@@ -1,45 +1,55 @@
-name: Empaquetar y publicar NuGet
+name: Empaquetar, Probar y Publicar NuGet con SonarCloud
 
 on:
   push:
     branches:
       - main
 
+env:
+  DOTNET_VERSION: '8.0.x'
+  SONAR_ORG: 'apibankk'
+  SONAR_PROJECT: 'apibankk_lab3'
+  NUGET_PROJECT: 'Bank/Bank.Domain/Bank.Domain.csproj'
+  NUGET_OUTPUT_DIR: './nupkg'
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clonar el código
+      # 1. Clonar código
       - name: Checkout código
         uses: actions/checkout@v3
 
       # 2. Configurar .NET
-      - name: Configurar .NET
+      - name: Setup .NET SDK ${{ env.DOTNET_VERSION }}
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      # 3. Restaurar dependencias
       - name: Restaurar dependencias
         run: dotnet restore Bank/Bank.sln
 
-      # 4. Ejecutar pruebas unitarias
+      # 4. Ejecutar pruebas con cobertura
       - name: Ejecutar pruebas unitarias
         run: dotnet test Bank/Bank.WebApi.Tests/Bank.WebApi.Tests.csproj --collect:"XPlat Code Coverage"
 
-
-      # 5. Analizar con SonarCloud
+      # 5. Análisis con SonarCloud
       - name: Analizar con SonarCloud
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          organization: apibankk
-          projectKey: apibankk_lab3
-          token: ${{ secrets.SONAR_TOKEN }}
+          args: >
+            -Dsonar.projectKey=${{ env.SONAR_PROJECT }}
+            -Dsonar.organization=${{ env.SONAR_ORG }}
+            -Dsonar.host.url=https://sonarcloud.io
 
       # 6. Empaquetar NuGet
-      - name: Empaquetar proyecto Bank.WebApi
-        run: dotnet pack Bank/Bank.WebApi/Bank.WebApi.csproj -c Release -o output
+      - name: Empaquetar proyecto NuGet
+        run: dotnet pack ${{ env.NUGET_PROJECT }} -c Release -o ${{ env.NUGET_OUTPUT_DIR }}
 
-      # 7. Publicar NuGet en GitHub Packages
-      - name: Publicar paquete
-        run: dotnet nuget push output/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
+      # 7. Publicar paquete NuGet en GitHub Packages
+      - name: Publicar paquete NuGet
+        run: dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
