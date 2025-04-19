@@ -18,32 +18,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Instalar dependencias
+        run: |
+          # Instalar Semgrep
+          python -m pip install semgrep==1.56.0
+          # Instalar Prospector2HTML
+          python -m pip install prospector2html
+          # Instalar jq para manipular JSON (si lo necesitas)
+          sudo apt-get install jq
+
       - name: Ejecutar Semgrep
         run: |
+          # Ejecutar el análisis de Semgrep
           semgrep scan --config="p/default" --json --output semgrep.json
 
       - name: Convertir el reporte JSON a HTML
         run: |
-          # Instalar prospector2html si es necesario
-          python -m pip install prospector2html
-          
-          # Convertir el reporte de Semgrep a HTML
+          # Convertir el reporte de Semgrep a HTML usando Prospector
           prospector-html --input semgrep.json --output semgrep-report.html --filter semgrep
 
       - name: Configurar GitHub Pages
         run: |
-          # Configurar GitHub Pages
+          # Crear la carpeta para GitHub Pages
           mkdir -p gh-pages
-          mv semgrep-report.html gh-pages/index.html  # Mover el reporte a la carpeta para GitHub Pages
+          # Mover el reporte HTML a la carpeta para GitHub Pages
+          mv semgrep-report.html gh-pages/index.html
 
       - name: Configurar git
         run: |
+          # Configurar el nombre y el correo para git
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
       - name: Publicar en GitHub Pages
         run: |
+          # Realizar el commit y push del reporte generado
           git add -A
           git commit -m "Publicar reporte Semgrep"
           git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
-
