@@ -56,11 +56,10 @@ jobs:
           echo "Listing .nupkg files:"
           ls -la ${{ env.NUGET_OUTPUT_DIR }}
 
-          dotnet nuget add source "https://nuget.pkg.github.com/mayrafc/index.json" \
-            --name github \
-            --username ${{ github.actor }} \
-            --password ${{ secrets.GIT_TOKEN }}
-
-          dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg --source "github" --skip-duplicate
+          dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg \
+            --source "https://nuget.pkg.github.com/mayrafc/index.json" \
+            --api-key ${{ secrets.GIT_TOKEN }} \
+            --skip-duplicate
         env:
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+
