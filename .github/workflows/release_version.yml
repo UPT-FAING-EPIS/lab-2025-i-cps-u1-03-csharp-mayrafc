@@ -1,0 +1,90 @@
+name: Release Version
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Paso 1: Check out el código fuente
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Paso 2: Configurar el SDK de .NET
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    # Paso 3: Restaurar las dependencias para el proyecto principal
+    - name: Restore dependencies for main project
+      run: dotnet restore Bank/Bank.WebApi/Bank.WebApi.csproj
+
+    # Paso 4: Restaurar las dependencias para el proyecto de pruebas
+    - name: Restore dependencies for test project
+      run: dotnet restore Bank/Bank.WebApi.Tests/Bank.WebApi.Tests.csproj
+
+    # Paso 5: Ejecutar las pruebas unitarias
+    - name: Run Unit Tests
+      run: dotnet test Bank/Bank.WebApi.Tests/Bank.WebApi.Tests.csproj --no-restore --verbosity normal
+
+    # Paso 6: Construir el paquete NuGet
+    - name: Build NuGet Package
+      run: dotnet pack Bank/Bank.WebApi/Bank.WebApi.csproj -o ./nupkgs
+
+    # Paso 7: Verificar si se generó el archivo .nupkg
+    - name: Verify .nupkg file
+      run: |
+        if [ -f ./nupkgs/*.nupkg ]; then
+          echo ".nupkg file found!"
+        else
+          echo "No .nupkg file found, aborting release step!"
+          exit 1
+        fi
+
+    # Paso 8: Crear un Release en GitHub
+    - name: Create GitHub Release
+      id: create_release
+      run: |
+        RELEASE_TAG=$(echo ${GITHUB_REF} | sed 's/refs\/tags\///')  # Este debería ser un tag, no una rama
+        if [[ $RELEASE_TAG == "refs/heads/"* ]]; then
+          echo "This is not a tag push, skipping release creation."
+          exit 0
+        fi
+        echo "Creating release for tag: $RELEASE_TAG"
+        gh release create $RELEASE_TAG ./nupkgs/*.nupkg --title "Release $RELEASE_TAG" --notes "Automated release for version $RELEASE_TAG"
+      env:
+        GH_TOKEN: ${{ github.token }}  # Usar el token de GitHub proporcionado por Actions
+
+    
+    # Paso 9: Subir el paquete a GitHub Releases
+    - name: Upload .nupkg to GitHub Releases
+      run: |
+        # Extrae el tag del nombre del ref
+        RELEASE_TAG=$(echo ${GITHUB_REF} | sed 's/refs\/tags\///')
+
+        # Verificar que el ref sea un tag, no una rama
+        if [[ "$RELEASE_TAG" == "refs/heads/"* ]]; then
+          echo "This is not a tag push, skipping release upload."
+          exit 0
+        fi
+
+        # Verificar si el release ya existe
+        RELEASE_EXISTS=$(gh release view $RELEASE_TAG --json name -q ".name" || echo "false")
+
+        if [ "$RELEASE_EXISTS" == "false" ]; then
+          echo "Release not found, creating release for tag $RELEASE_TAG."
+          gh release create $RELEASE_TAG ./nupkgs/*.nupkg --title "Release $RELEASE_TAG" --notes "Automated release for version $RELEASE_TAG"
+        else
+          echo "Release $RELEASE_TAG already exists, skipping creation."
+        fi
+
+        # Subir el archivo .nupkg al release
+        gh release upload $RELEASE_TAG ./nupkgs/*.nupkg --clobber
+      env:
+        GH_TOKEN: ${{ github.token }}  # Usar el token automático de GitHub Actions
