@@ -51,6 +51,5 @@ jobs:
         run: dotnet pack ${{ env.NUGET_PROJECT }} -c Release -o ${{ env.NUGET_OUTPUT_DIR }}
 
 
-      # 7. Publicar paquete NuGet en GitHub Packages
       - name: Publicar paquete NuGet
         run: dotnet nuget push ${{ env.NUGET_OUTPUT_DIR }}/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
