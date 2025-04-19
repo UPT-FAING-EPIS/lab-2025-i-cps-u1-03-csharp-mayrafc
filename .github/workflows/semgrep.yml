@@ -3,11 +3,11 @@ name: Publicar Reporte Semgrep en GitHub Pages
 on:
   push:
     branches:
-      - main  # O la rama en la que quieras que se ejecute el análisis
+      - main  
 
 jobs:
   semgrep_scan_and_report:
-    runs-on: ubuntu-latest  # Ejecutar en un entorno Linux de GitHub Actions
+    runs-on: ubuntu-latest 
 
     steps:
       - name: Checkout repository
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Establecer versión de Python
+          python-version: '3.x'  
 
       - name: Install dependencies
         run: |
@@ -48,5 +48,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Publicar en la raíz del repositorio
-          publish_branch: gh-pages  # Publicar en la rama gh-pages
+          publish_dir: ./
+          publish_branch: gh-pages  
