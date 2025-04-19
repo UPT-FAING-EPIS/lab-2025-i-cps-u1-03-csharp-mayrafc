@@ -27,7 +27,7 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      # 3. Restaurar dependencias
+
       - name: Restaurar dependencias
         run: dotnet restore Bank/Bank.sln
 
