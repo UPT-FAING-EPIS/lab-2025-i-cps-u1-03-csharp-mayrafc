@@ -1,0 +1,11 @@
+### YamlMime:TableOfContent
+- uid: Bank.Domain.Tests
+  name: Bank.Domain.Tests
+  items:
+  - uid: Bank.Domain.Tests.BankAccountTests
+    name: BankAccountTests
+- uid: Bank.WebApi.Models
+  name: Bank.WebApi.Models
+  items:
+  - uid: Bank.WebApi.Models.BankAccount
+    name: BankAccount
